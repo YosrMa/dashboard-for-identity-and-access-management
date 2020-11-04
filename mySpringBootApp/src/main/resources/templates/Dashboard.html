@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tableau de bord</title>
+<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body { padding-top: 90px;background-color:#DDD; }
+    h2{text-align: center;}
+    .dash{margin-top: 8px;}
+</style>
+</head>
+<body>
+<div class="container" >
+        <div class="row">
+                
+      <nav class="navbar  navbar-default navbar-fixed-top  ">
+            
+            
+            <div class="col-md-4 col-sm-8 ">
+                   
+                    <div class="row">
+                            <div class="col-md-2 ">
+                     
+                    <i class="fa  fa-tachometer fa-pull-left dash " aria-hidden="true" style="font-size:45px;color:#F7464A;"></i>
+                            </div>
+                            <div class="col-md-10 ">
+                    <h3 style="color:#F7464A;">  TABLEAU DE BORD </h3>
+                    </div>
+                 </div>
+               
+                    
+              
+            </div>
+             <div class="col-md-offset-6 col-md-2 col-sm-2 offset-sm-2 ">
+                 
+                     
+                            <ul class="nav  justify-content-end ">
+                              
+                              <li  class="nav-item" >
+                                  <a th:href="@{/login?logout}" >  <i class="fa fa-sign-out" style="color:#46BFBD;"></i> <span style="color:#46BFBD;">Déconnexion</span> </a> </li>
+                              
+                            </ul>
+                            
+                     
+             </div>
+                
+           
+          
+          
+        
+      </nav>
+    
+</div> 
+</div>
+<div class="container" >
+<div class="row">
+        <div class="col-md-5">
+
+                <h2 >Catégories des administrateurs </h2>
+                <canvas  id="doughnutChart" height="200"></canvas>
+
+        </div>
+        <div class="offset-md-2 col-md-5">
+                <h2>Niveaux de sécurité </h2>
+                <canvas id="bar-chart-horizontal" height="200" ></canvas>
+
+
+        </div>
+
+
+
+
+
+</div>
+
+<div class="row">
+
+                <div class="col-md-5">
+
+                                <h2 >Changement de mots de passes </h2>
+                                <canvas id="lineChart" height="200"></canvas>
+                               
+                
+                        </div>
+                         <div class="offset-md-2 col-md-5">
+                                                <h2>Pourcentage des comptes inactifs pour plus de 7 jours </h2>
+                                                <canvas id="pieChart" height="200" ></canvas>
+                                
+                                
+                                        </div>
+
+
+
+</div>
+
+
+
+
+
+</div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+<script type="text/javascript" src="/js/doughnut.js"></script>
+<script type="text/javascript" src="/js/pieChart.js"></script>
+<script type="text/javascript" src="/js/courbe.js"></script>
+<script type="text/javascript" src="/js/horizontalBar.js"></script>
+
+      
+       
+
+</body>
+</html>
